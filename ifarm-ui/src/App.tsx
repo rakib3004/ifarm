@@ -1,34 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>iFarm Connector</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    
+     <div className="main">
+            <h3 className="head">iFarm  Dashboard</h3>
+            <div className="container">
+                <ul>
+                    <li>
+                        <h3 className="heading">Top Pages</h3>
+                        <p>Asif Adnan, আরিফ আজাদ, Mizanur Rahman Azhari, Ahmadullah, Abdullah Al Masud, Shamsul Arefin Shakti and more....   </p>
+                        <a href="#">View Details</a>
+                        <span className="date">Facebook</span>
+                        <span className="circle"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Top Channels</h3>
+                        <p>Baseera, Rain Drops Media, Mizanur Rahman Azhari, Arif Azad, Islam Zone and more ...</p>
+                        <a href="#">View Details</a>
+                        <span className="date">YouTube</span>
+                        <span className="circle"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Top Blogs</h3>
+                        <p>Cintaporadh, Assunnah Foundation, Shohid Info, Quran and more ...</p>
+                        <a href="#">View Details</a>
+                        <span className="date">Websites</span>
+                        <span className="circle"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
   )
 }
 
