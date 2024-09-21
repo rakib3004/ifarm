@@ -6,28 +6,28 @@ function App() {
   return (
     
      <div className="main">
-            <h3 className="head">iFarm  Dashboard</h3>
+            <h3 className="head">eFarm Dashboard</h3>
             <div className="container">
                 <ul>
                     <li>
-                        <h3 className="heading">Top Pages</h3>
-                        <p>Asif Adnan, আরিফ আজাদ, Mizanur Rahman Azhari, Ahmadullah, Abdullah Al Masud, Shamsul Arefin Shakti and more....   </p>
+                        <h3 className="heading">My Products</h3>
+                        <p>Manage your products for expanding business smoothly</p>
                         <a href="#">View Details</a>
-                        <span className="date">Facebook</span>
+                        <span className="date">eProducts</span>
                         <span className="circle"></span>
                     </li>
                     <li>
-                        <h3 className="heading">Top Channels</h3>
-                        <p>Baseera, Rain Drops Media, Mizanur Rahman Azhari, Arif Azad, Islam Zone and more ...</p>
+                        <h3 className="heading">Trade Contract</h3>
+                        <p>Operate trades for optimizing profits</p>
                         <a href="#">View Details</a>
-                        <span className="date">YouTube</span>
+                        <span className="date">eTrade</span>
                         <span className="circle"></span>
                     </li>
                     <li>
-                        <h3 className="heading">Top Blogs</h3>
-                        <p>Cintaporadh, Assunnah Foundation, Shohid Info, Quran and more ...</p>
+                        <h3 className="heading">Tracking Delivaries</h3>
+                        <p>Track delivaries for </p>
                         <a href="#">View Details</a>
-                        <span className="date">Websites</span>
+                        <span className="date">eTrac</span>
                         <span className="circle"></span>
                     </li>
                 </ul>
