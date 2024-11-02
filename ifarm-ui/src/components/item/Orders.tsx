@@ -1,12 +1,19 @@
-import ProductCard from './ProductCard';
+import ProductCard from '../track/ProductCard';
 import egg from "/images/egg.png";
 import chicken from "/images/chicken.png";
 import cow from "/images/cow.png";
 import potato from "/images/potato.png";   
 import rice from "/images/rice.png";
-
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  price: string | number;
+  image: string;
+  trackingNumber: string;
+}
 const Orders = () => {
-  const products = [
+  const products: Product[] = [
     { id: 1, title: 'Egg', description: 'The Bengal Egg Farm', price: 15, image: egg, trackingNumber: '11803001' },
     { id: 2, title: 'Chicken', description: 'Black n white Chicken farm', price: 200, image: chicken, trackingNumber: '4236246' },
     { id: 3, title: 'Cow', description: 'Cow from how cow shop', price: 700, image:cow, trackingNumber: '623547156435654' },
@@ -22,4 +29,4 @@ const Orders = () => {
     </main>
   )
 }
-export default Orders
+export default Orders;

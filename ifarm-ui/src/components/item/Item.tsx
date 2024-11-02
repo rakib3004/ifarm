@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Orders from "./Orders";
-function Item() { 
+
+const Item = () => { 
   return (
     <>
       <Navbar/>
@@ -8,6 +9,4 @@ function Item() {
     </>
   )
 }
-
 export default Item;
-
