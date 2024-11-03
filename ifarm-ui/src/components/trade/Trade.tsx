@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Orders from "./Orders";
 
-const Item = () => { 
+const Trade = () => { 
   return (
     <>
       <Navbar/>
@@ -9,4 +9,4 @@ const Item = () => {
     </>
   )
 }
-export default Item;
+export default Trade;

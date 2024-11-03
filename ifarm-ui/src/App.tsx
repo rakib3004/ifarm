@@ -1,11 +1,9 @@
-import Home from './components/home/home'
-import { TableComponent } from './components/table/table';
+import Dashboard from "./components/dashboard/Dashboard";
 
 const App = () => {
   return (
 <div>
-<Home></Home>
-<TableComponent></TableComponent>
+<Dashboard></Dashboard>
 </div>
   )
 }

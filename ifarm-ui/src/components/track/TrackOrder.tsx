@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Navbar from "./../item/Navbar";
+import Navbar from "../trade/Navbar";
 const TrackOrder = () => {
   const { trackingNumber } = useParams();
   const orderData = [
