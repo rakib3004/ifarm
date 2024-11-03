@@ -23,82 +23,12 @@ import {
   CurrencyDollar,
   DotsNine,
   DotsThreeOutlineVertical,
-  Flag,
   Funnel,
   NavigationArrow,
   Plus,
   Spinner,
 } from "phosphor-react";
-
-
-const tableData = [
-  {
-    id: 1,
-    type: 'DL-19266755',
-    date: {
-      day: 'Feb 28, 2024',
-      time: '10:00 am',
-    },
-    country: '/images/icon/country-0.svg',
-    status: 'Delivered',
-    quant: 100,
-    price: 21000,
-    location: 'New York, USA',
-  },
-  {
-    id: 2,
-    type: 'DL-19266756',
-    date: {
-      day: 'Mar 1, 2024',
-      time: '11:00 am',
-    },
-    country: '/images/icon/country-1.svg',
-    status: 'In Transit',
-    quant: 200,
-    price: 42000,
-    location: 'Los Angeles, USA',
-  },
-  {
-    id: 3,
-    type: 'DL-19266757',
-    date: {
-      day: 'Mar 2, 2024',
-      time: '12:00 pm',
-    },
-    country: '/images/icon/country-2.svg',
-    status: 'Pending',
-    quant: 150,
-    price: 31500,
-    location: 'Chicago, USA',
-  },
-  {
-    id: 4,
-    type: 'DL-19266758',
-    date: {
-      day: 'Mar 3, 2024',
-      time: '1:00 pm',
-    },
-    country: '/images/icon/country-4.svg',
-    status: 'Delivered',
-    quant: 300,
-    price: 63000,
-    location: 'Houston, USA',
-  },
-  {
-    id: 5,
-    type: 'DL-19266759',
-    date: {
-      day: 'Mar 4, 2024',
-      time: '2:00 pm',
-    },
-    country: '/images/icon/country-5.svg',
-    status: 'In Transit',
-    quant: 250,
-    price: 52500,
-    location: 'Phoenix, USA',
-  },
-]
-  
+import { tableData } from './TrackDeliveryData';
 
 export const TrackDelivery = () => {
   return (
@@ -136,12 +66,6 @@ export const TrackDelivery = () => {
             <p className="flex w-[100px] items-center gap-1.5">
               <Calendar className="size-4 fill-metal-900 dark:fill-white" />
               Date
-            </p>
-          </TableHead>
-          <TableHead>
-            <p className="flex items-center gap-1.5">
-              <Flag className="size-4 fill-metal-900 dark:fill-white" />
-              Country
             </p>
           </TableHead>
           <TableHead>
@@ -185,7 +109,6 @@ export const TrackDelivery = () => {
               </div>
             </TableCell>
             <TableCell className="flex items-center justify-center">
-              <img src={item.country} alt="flag" />
             </TableCell>
             <TableCell>
               <Badge

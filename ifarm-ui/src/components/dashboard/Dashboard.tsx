@@ -25,7 +25,7 @@ const Dashboard = () => {
                     <li>
                         <h3 className="heading">Tracking Delivaries</h3>
                         <p>Track delivaries for </p>
-                        <a href="#">View Details</a>
+                        <a href="./trackDelivery">View Details</a>
                         <span className="date">eTrack</span>
                         <span className="circle"></span>
                     </li>

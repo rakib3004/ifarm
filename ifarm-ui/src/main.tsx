@@ -6,6 +6,7 @@ import Trade from "./components/trade/Trade.tsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import TrackOrder from "./components/track/TrackOrder.tsx";
 import { Products } from "./components/products/Products.tsx";
+import { TrackDelivery } from "./components/track/TrackDelivery.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/track/:trackingNumber",
     element: <TrackOrder/>
+  },
+  {
+    path: "/trackDelivery",
+    element: <TrackDelivery/>
   },
   {
     path: "/products",
