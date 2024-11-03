@@ -1,5 +1,4 @@
-export 
-const tableData = [
+export const tableData = [
   {
     id: 1,
     type: 'Beef',

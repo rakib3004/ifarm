@@ -108,8 +108,6 @@ export const TrackDelivery = () => {
                 <p className="text-body-5 font-normal text-metal-600 dark:text-metal-300">{item.date.time}</p>
               </div>
             </TableCell>
-            <TableCell className="flex items-center justify-center">
-            </TableCell>
             <TableCell>
               <Badge
                 className="text-body-4"
