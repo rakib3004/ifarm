@@ -5,7 +5,10 @@ import "./index.css";
 import Trade from "./components/trade/Trade.tsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import TrackOrder from "./components/track/TrackOrder.tsx";
-import { Products } from "./components/products/Products.tsx";
+import { Products } from "./components/Products.tsx";
+import { Sellers } from "./components/Sellers.tsx";
+import { Buyers } from "./components/Buyers.tsx";
+import { Transports } from "./components/Transports.tsx";
 import { TrackDelivery } from "./components/track/TrackDelivery.tsx";
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
   {
     path: "/products",
     element: <Products/>
+  },
+  {
+    path: "/sellers",
+    element: <Sellers/>
+  },
+  {
+    path: "/buyers",
+    element: <Buyers/>
+  },
+  {
+    path: "/transports",
+    element: <Transports/>
   },
 ]);
 createRoot(document.getElementById("root")!).render(
