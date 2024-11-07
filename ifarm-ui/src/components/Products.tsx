@@ -6,66 +6,36 @@ import {
   TableHeader,
   TableRow,
 } from "keep-react";
-
+import {products} from "../data/products.ts";
 export const Products = () => {
-  const tableData = [
-    {
-      id: "6515202626",
-      productName: "Egg",
-      productId: "10023E",
-      perUnitPrice: "8",
-      totalCount: "900",
-      shopName: "Egg House",
-      location: "Rajshahi",
-    },
-
-    {
-      id: "6515202627",
-      productName: "Milk",
-      productId: "10021M",
-      perUnitPrice: "85",
-      totalCount: "200",
-      shopName: "Aftabnaga Milk Co.",
-      location: "Dhaka",
-    },
-    {
-      id: "6515202628",
-      productName: "Beaf",
-      productId: "10007B",
-      perUnitPrice: "700",
-      totalCount: "67",
-      shopName: "Northern Meat",
-      location: "Gazipur",
-    },
-  ];
   return (
     <div>
       <h1 className="font-semibold text-center text-3xl my-12">List of Available Products</h1>
       <Table>
         <TableHeader>
-          <TableRow>
+        <TableRow>
             <TableHead>
-              <div className="max-w-[250px]">Product Name</div>
+              <div className="max-w-[250px]">Shop Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Product Id</div>
+              <div className="w-[80px]">Owner Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[85px]">Product Price Per Unit</div>
+              <div className="w-[85px]">Phone Number</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Total Count</div>
+              <div className="w-[90px]">Transaction Type</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Shop Name</div>
+              <div className="w-[90px]">Transaction No</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Shop Location</div>
+              <div className="w-[80px]">Email</div>
             </TableHead>
-          </TableRow>
+        </TableRow>
         </TableHeader>
         <TableBody>
-          {tableData.map((item) => (
+          {products.map((item) => (
             <TableRow key={item.id}>
               <TableCell>
                 <div className="max-w-[250px] truncate">{item.productName}</div>

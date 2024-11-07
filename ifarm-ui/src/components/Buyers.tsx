@@ -6,38 +6,8 @@ import {
   TableHeader,
   TableRow,
 } from "keep-react";
-
+import {shops} from '../data/shops.js';
 export const Buyers = () => {
-  const tableData = [
-    {
-      id: "6515202626",
-      productName: "Egg",
-      productId: "10023E",
-      perUnitPrice: "8",
-      totalCount: "900",
-      shopName: "Egg House",
-      location: "Rajshahi",
-    },
-
-    {
-      id: "6515202627",
-      productName: "Milk",
-      productId: "10021M",
-      perUnitPrice: "85",
-      totalCount: "200",
-      shopName: "Aftabnaga Milk Co.",
-      location: "Dhaka",
-    },
-    {
-      id: "6515202628",
-      productName: "Beaf",
-      productId: "10007B",
-      perUnitPrice: "700",
-      totalCount: "67",
-      shopName: "Northern Meat",
-      location: "Gazipur",
-    },
-  ];
   return (
     <div>
       <h1 className="font-semibold text-center text-3xl my-12">List of Available Buyers</h1>
@@ -65,16 +35,16 @@ export const Buyers = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {tableData.map((item) => (
-            <TableRow key={item.id}>
+          {shops.map((item) => (
+            <TableRow key={item.PhoneNo}>
               <TableCell>
-                <div className="max-w-[250px] truncate">{item.productName}</div>
+                <div className="max-w-[250px] truncate">{item.ShopName}</div>
               </TableCell>
-              <TableCell>{item.productId}</TableCell>
-              <TableCell>{item.perUnitPrice}</TableCell>
-              <TableCell>{item.totalCount}</TableCell>
-              <TableCell>{item.shopName}</TableCell>
-              <TableCell>{item.location}</TableCell>
+              <TableCell>{item.OwnerName}</TableCell>
+              <TableCell>{item.PhoneNo}</TableCell>
+              <TableCell>{item.TransactionType}</TableCell>
+              <TableCell>{item.TransactionNo}</TableCell>
+              <TableCell>{item.Email}</TableCell>
             </TableRow>
           ))}
         </TableBody>

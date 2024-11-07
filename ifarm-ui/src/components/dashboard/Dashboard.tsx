@@ -29,7 +29,29 @@ const Dashboard = () => {
                         <span className="date">eTrack</span>
                         <span className="circle"></span>
                     </li>
+                    <li>
+                        <h3 className="heading">Sellers</h3>
+                        <p>Make easy our trades by providing products</p>
+                        <a href="./sellers">View Details</a>
+                        <span className="date">eSellers</span>
+                        <span className="circle"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Buyers</h3>
+                        <p>Gateway of our end customer to complete cost friendly delivaries</p>
+                        <a href="./buyers">View Details</a>
+                        <span className="date">eBuyers</span>
+                        <span className="circle"></span>
+                    </li>
+                    <li>
+                        <h3 className="heading">Transports</h3>
+                        <p>Top contributors who make succesful transportation</p>
+                        <a href="./transports">View Details</a>
+                        <span className="date">eTransport</span>
+                        <span className="circle"></span>
+                    </li>
                 </ul>
+                
             </div>
         </div>
   )

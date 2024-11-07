@@ -1,4 +1,4 @@
-export const shop = [
+export const shops = [
     {
         "Type": "Buyer",
         "ShopName": "Dhaka Bazar",
