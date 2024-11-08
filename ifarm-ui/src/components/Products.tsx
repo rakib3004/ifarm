@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "keep-react";
-import {products} from "../data/products.ts";
+import {products} from "../data/legacy/products.ts";
 export const Products = () => {
   return (
     <div>

@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "keep-react";
-import {transports} from '../data/transports.ts'
+import {transports} from '../data/legacy/transports.ts'
 
 export const Transports = () => {
 

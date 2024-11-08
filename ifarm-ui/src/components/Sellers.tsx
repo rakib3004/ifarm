@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "keep-react";
-import { shops } from "../data/shops";
+import { shops } from "../data/legacy/shops";
 export const Sellers = () => {
   return (
     <div>
@@ -36,7 +36,7 @@ export const Sellers = () => {
         </TableRow>
         </TableHeader>
         <TableBody>
-          {shops.map((item) => (
+          {shops.filter((item) => item.Type === "Seller").map((item) => (
             <TableRow key={item.PhoneNo}>
               <TableCell>
                 <div className="max-w-[250px] truncate">{item.ShopName}</div>
