@@ -10,6 +10,7 @@ import { shops } from "../data/shops";
 export const Sellers = () => {
   return (
     <div>
+      <a href="./"><h1 className="text-3xl">eFarm</h1></a>
       <h1 className="font-semibold text-center text-3xl my-12">List of Available Sellers</h1>
       <Table>
         <TableHeader>

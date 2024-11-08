@@ -42,9 +42,10 @@ export const TrackDelivery = () => {
     <Table>
       <TableCaption>
         <div className="flex items-center justify-between">
+        <a href="./"><h1 className="text-5xl">eFarm</h1></a>
           <div className="flex items-center gap-5">
             <h2 className="text-heading-6 font-semibold text-metal-900 dark:text-white">
-              Total Orders
+              My Orders Status
             </h2>
             <Badge color="secondary">200 Orders</Badge>
           </div>
