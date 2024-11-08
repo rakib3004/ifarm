@@ -204,4 +204,5 @@ export const buyers = [
             "thana": "Shahbagh",
             "zilla": "Dhaka"
         }
-    } ]
+    }
+]
