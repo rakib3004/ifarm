@@ -1,5 +1,4 @@
-
-'use client'
+"use client";
 import {
   Badge,
   Button,
@@ -15,11 +14,19 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from 'keep-react'
+  Modal,
+  ModalAction,
+  ModalContent,
+  ModalDescription,
+  ModalFooter,
+  ModalHeader,
+  ModalTitle,
+} from "keep-react";
 
 import {
   ArrowsDownUp,
   Calendar,
+  CloudArrowUp,
   CurrencyDollar,
   DotsNine,
   DotsThreeOutlineVertical,
@@ -28,7 +35,7 @@ import {
   Plus,
   Spinner,
 } from "phosphor-react";
-import { tableData } from './TrackDeliveryData';
+import { tableData } from "./TrackDeliveryData";
 
 export const TrackDelivery = () => {
   return (
@@ -36,14 +43,39 @@ export const TrackDelivery = () => {
       <TableCaption>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-5">
-            <h2 className="text-heading-6 font-semibold text-metal-900 dark:text-white">Total Orders</h2>
+            <h2 className="text-heading-6 font-semibold text-metal-900 dark:text-white">
+              Total Orders
+            </h2>
             <Badge color="secondary">200 Orders</Badge>
           </div>
           <div className="flex items-center gap-5">
-            <Button variant="outline" className="gap-1.5">
-              <Plus className="size-4 fill-metal-900 dark:fill-white" />
-              Add Order
-            </Button>
+            <Modal>
+              <ModalAction asChild>
+                <Button variant="outline" className="gap-1.5">
+                  <Plus className="size-4 fill-metal-900 dark:fill-white" />
+                  Add Order
+                </Button>
+              </ModalAction>
+              <ModalContent>
+                <ModalHeader className="mb-6 space-y-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-metal-50 text-metal-900 dark:bg-metal-800 dark:text-white">
+                    <CloudArrowUp size={28} />
+                  </div>
+                  <div className="space-y-1">
+                    <ModalTitle>Update Modal Status</ModalTitle>
+                    <ModalDescription>
+                      Your document has unsaved changes. Discard or save them as
+                      a new page to continue.
+                    </ModalDescription>
+                  </div>
+                </ModalHeader>
+                <ModalFooter>
+                  <Button variant="outline">Cancel</Button>
+                  <Button>Confirm</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+
             <Button variant="outline" className="gap-1.5">
               <Funnel className="size-4 fill-metal-900 dark:fill-white" />
               Filter Order
@@ -105,18 +137,29 @@ export const TrackDelivery = () => {
             <TableCell>
               <div>
                 <p>{item.date.day}</p>
-                <p className="text-body-5 font-normal text-metal-600 dark:text-metal-300">{item.date.time}</p>
+                <p className="text-body-5 font-normal text-metal-600 dark:text-metal-300">
+                  {item.date.time}
+                </p>
               </div>
             </TableCell>
             <TableCell>
               <Badge
                 className="text-body-4"
-                color={item.status === 'Delivered' ? 'success' : item.status === 'In Transit' ? 'error' : 'warning'}>
+                color={
+                  item.status === "Delivered"
+                    ? "success"
+                    : item.status === "In Transit"
+                    ? "error"
+                    : "warning"
+                }
+              >
                 {item.status}
               </Badge>
             </TableCell>
             <TableCell className="text-center">{item.quant}</TableCell>
-            <TableCell className="text-center">{item.price.toLocaleString()}</TableCell>
+            <TableCell className="text-center">
+              {item.price.toLocaleString()}
+            </TableCell>
             <TableCell>{item.location}</TableCell>
             <TableCell>
               <Dropdown>
@@ -136,5 +179,5 @@ export const TrackDelivery = () => {
         ))}
       </TableBody>
     </Table>
-  )
-}
+  );
+};

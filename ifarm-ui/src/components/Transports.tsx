@@ -6,38 +6,10 @@ import {
   TableHeader,
   TableRow,
 } from "keep-react";
+import {transports} from '../data/transports.ts'
 
 export const Transports = () => {
-  const tableData = [
-    {
-      id: "6515202626",
-      productName: "Egg",
-      productId: "10023E",
-      perUnitPrice: "8",
-      totalCount: "900",
-      shopName: "Egg House",
-      location: "Rajshahi",
-    },
 
-    {
-      id: "6515202627",
-      productName: "Milk",
-      productId: "10021M",
-      perUnitPrice: "85",
-      totalCount: "200",
-      shopName: "Aftabnaga Milk Co.",
-      location: "Dhaka",
-    },
-    {
-      id: "6515202628",
-      productName: "Beaf",
-      productId: "10007B",
-      perUnitPrice: "700",
-      totalCount: "67",
-      shopName: "Northern Meat",
-      location: "Gazipur",
-    },
-  ];
   return (
     <div>
       <h1 className="font-semibold text-center text-3xl my-12">List of Available Transports</h1>
@@ -45,36 +17,32 @@ export const Transports = () => {
         <TableHeader>
           <TableRow>
             <TableHead>
-              <div className="max-w-[250px]">Product Name</div>
+              <div className="max-w-[250px]">Transport Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Product Id</div>
+              <div className="w-[80px]">Transport Id</div>
             </TableHead>
             <TableHead>
-              <div className="w-[85px]">Product Price Per Unit</div>
+              <div className="w-[85px]">Transport Type</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Total Count</div>
+              <div className="w-[90px]">Driver Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Shop Name</div>
-            </TableHead>
-            <TableHead>
-              <div className="w-[80px]">Shop Location</div>
+              <div className="w-[80px]">Transport Location</div>
             </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {tableData.map((item) => (
-            <TableRow key={item.id}>
+          {transports.map((item) => (
+            <TableRow key={item.transport_id}>
               <TableCell>
-                <div className="max-w-[250px] truncate">{item.productName}</div>
+                <div className="max-w-[250px] truncate">{item.transport_name}</div>
               </TableCell>
-              <TableCell>{item.productId}</TableCell>
-              <TableCell>{item.perUnitPrice}</TableCell>
-              <TableCell>{item.totalCount}</TableCell>
-              <TableCell>{item.shopName}</TableCell>
-              <TableCell>{item.location}</TableCell>
+              <TableCell>{item.transport_id}</TableCell>
+              <TableCell>{item.transport_type}</TableCell>
+              <TableCell>{item.driver_name}</TableCell>
+              <TableCell>{item.address}</TableCell>
             </TableRow>
           ))}
         </TableBody>
