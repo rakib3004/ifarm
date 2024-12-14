@@ -15,22 +15,22 @@ export const Products = () => {
         <TableHeader>
         <TableRow>
             <TableHead>
-              <div className="max-w-[250px]">Shop Name</div>
+              <div className="max-w-[250px]">Productt Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Owner Name</div>
+              <div className="w-[80px]">Product Id</div>
             </TableHead>
             <TableHead>
-              <div className="w-[85px]">Phone Number</div>
+              <div className="w-[85px]">Price</div>
             </TableHead>
             <TableHead>
               <div className="w-[90px]">Transaction Type</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Transaction No</div>
+              <div className="w-[90px]">Shop Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Email</div>
+              <div className="w-[80px]">Location</div>
             </TableHead>
         </TableRow>
         </TableHeader>
