@@ -10,10 +10,15 @@ import { Sellers } from "./components/Sellers.tsx";
 import { Buyers } from "./components/Buyers.tsx";
 import { Transports } from "./components/Transports.tsx";
 import { TrackDelivery } from "./components/track/TrackDelivery.tsx";
+import Dashboard from "./components/dashboard/Dashboard.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
   {
     path: "/trade",

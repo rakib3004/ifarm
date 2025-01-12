@@ -1,9 +1,11 @@
-import Dashboard from "./components/dashboard/Dashboard";
+// import Dashboard from "./components/dashboard/Dashboard";
+import Landing from "./components/landing/Landing";
 
 const App = () => {
   return (
 <div>
-<Dashboard></Dashboard>
+{/* <Dashboard></Dashboard> */}
+<Landing></Landing>
 </div>
   )
 }
