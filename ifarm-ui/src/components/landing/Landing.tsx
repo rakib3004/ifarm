@@ -1,73 +1,55 @@
 
 import {
-  ChartPie,
-  CheckSquare,
-  Gear,
-  HouseLine,
-  Lifebuoy,
-  Link,
-  MagnifyingGlass,
-  PresentationChart,
-  Stack,
-  Users,
-} from 'phosphor-react'
-import {
-//   Avatar,
-//   AvatarImage,
-  Input,
-  InputIcon,
   Sidebar,
   SidebarBody,
-//   SidebarFooter,
   SidebarItem,
-  SidebarList,
-} from 'keep-react'
+  SidebarList
+} from 'keep-react';
+import {
+  BoundingBox,
+  Heart,
+  HouseLine,
+  MapPinLine,
+  PersonSimple,
+  ShoppingBag,
+  Truck,
+  User
+} from 'phosphor-react';
 const Landing = () => {
     return (
         <Sidebar>
           <SidebarBody>
-            <Link href="/" className="inline-flex items-center">
-              <span className="flex h-11 w-11 items-center justify-center rounded-md bg-metal-900 dark:bg-metal-800 text-heading-6 font-semibold text-white">
-                K.
-              </span>
-            </Link>
-            <fieldset className="relative">
-              <Input placeholder="Search" className="ps-11" />
-              <InputIcon>
-                <MagnifyingGlass size={19} color="#AFBACA" />
-              </InputIcon>
-            </fieldset>
             <SidebarList>
               <SidebarItem>
                 <HouseLine size={20} />
                 Home
               </SidebarItem>
               <SidebarItem>
-                <PresentationChart size={20} />
+                <BoundingBox size={20} />
                 Products
               </SidebarItem>
               <SidebarItem>
-                <Stack size={20} />
+                <MapPinLine size={20} />
                 Track
               </SidebarItem>
               <SidebarItem>
-                <CheckSquare size={20} />
+                <PersonSimple size={20} />
                 Sellers
               </SidebarItem>
               <SidebarItem>
-                <ChartPie size={20} />
+                <User size={20} />
                 Buyers
               </SidebarItem>
               <SidebarItem>
-                <Users size={20} />
+                <Truck size={20} />
                 Transport
               </SidebarItem>
               <SidebarItem>
-                <Lifebuoy size={20} />
+                <ShoppingBag size={20} />
                 Trade
               </SidebarItem>
               <SidebarItem>
-                <Gear size={20} />
+                <Heart size={20} />
                 Support
               </SidebarItem>
             </SidebarList>
