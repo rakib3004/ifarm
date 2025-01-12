@@ -18,19 +18,19 @@ export const Buyers = () => {
               <div className="max-w-[250px]">Shop Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Shop Id</div>
+              <div className="w-[80px]">Owner Name</div>
             </TableHead>
             <TableHead>
-              <div className="w-[85px]">Total Products</div>
+              <div className="w-[85px]">Contact Number</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Total Business</div>
+              <div className="w-[90px]">Transaction Type</div>
             </TableHead>
             <TableHead>
-              <div className="w-[90px]">Shop Name</div>
+              <div className="w-[90px]">Shop Id</div>
             </TableHead>
             <TableHead>
-              <div className="w-[80px]">Address</div>
+              <div className="w-[80px]">Email</div>
             </TableHead>
           </TableRow>
         </TableHeader>
