@@ -36,14 +36,15 @@ import {
   Spinner,
 } from "phosphor-react";
 import { tableData } from "./TrackDeliveryData";
+import Logo from "../common/Logo";
 
 export const TrackDelivery = () => {
   return (
     <Table>
       <TableCaption>
         <div className="flex items-center justify-between">
-        <a href="./"><h1 className="text-5xl">eFarm</h1></a>
-          <div className="flex items-center gap-5">
+        <Logo></Logo>
+        <div className="flex items-center gap-5">
             <h2 className="text-heading-6 font-semibold text-metal-900 dark:text-white">
               My Orders Status
             </h2>

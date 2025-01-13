@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../common/Logo";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -17,7 +18,12 @@ const Register = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.email || !formData.password || !formData.confirmPassword) {
+    if (
+      !formData.fullName ||
+      !formData.email ||
+      !formData.password ||
+      !formData.confirmPassword
+    ) {
       setError("All fields are required.");
       return;
     }
@@ -31,52 +37,60 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl font-bold text-center mb-6 text-emerald-600">Register</h2>
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            onChange={handleChange}
-          />
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm Password"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            onChange={handleChange}
-          />
-          <button
-            type="submit"
-            className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition"
-          >
+    <div>
+      <Logo></Logo>
+      <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-96">
+          <h2 className="text-2xl font-bold text-center mb-6 text-emerald-600">
             Register
-          </button>
-        </form>
-        <p className="text-sm text-center mt-4">
-          Already have an account?{" "}
-          <button onClick={() => navigate("/login")} className="text-emerald-600 hover:underline">
-            Login
-          </button>
-        </p>
+          </h2>
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              onChange={handleChange}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              onChange={handleChange}
+            />
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              onChange={handleChange}
+            />
+            <button
+              type="submit"
+              className="w-full bg-emerald-600 text-white py-3 rounded-lg hover:bg-emerald-700 transition"
+            >
+              Register
+            </button>
+          </form>
+          <p className="text-sm text-center mt-4">
+            Already have an account?{" "}
+            <button
+              onClick={() => navigate("/login")}
+              className="text-emerald-600 hover:underline"
+            >
+              Login
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
+import Logo from '../common/Logo';
 
 const Navbar = () => {
   return (
     <header className="bg-gray-700 text-white py-4 px-7">
-        <Link to="/"className='text-2xl front-semibold'>eFarm</Link>
-    </header>
+      <Logo></Logo>
+      </header>
   )
 }
 export default Navbar;

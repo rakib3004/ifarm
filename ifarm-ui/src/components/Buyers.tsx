@@ -7,9 +7,11 @@ import {
   TableRow,
 } from "keep-react";
 import {shops} from '../data/legacy/shops.js';
+import Logo from "./common/Logo.js";
 export const Buyers = () => {
   return (
     <div>
+      <Logo></Logo>
       <h1 className="font-semibold text-center text-3xl my-12">List of Available Buyers</h1>
       <Table>
         <TableHeader>

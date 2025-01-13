@@ -19,6 +19,7 @@ import {
 } from "keep-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Logo from "../common/Logo";
 
 const Landing = () => {
   const [isLogged, setIsLogged] = useState(false);
@@ -29,11 +30,7 @@ const Landing = () => {
       <div>
         <Sidebar>
           <SidebarBody>
-            <img
-              src="images/logo.png"
-              alt="speaker"
-              className="rounded-full w-16 h-16"
-            />
+            <Logo></Logo>
             <SidebarList>
               <SidebarItem onClick={() => navigate("/")}>
                 <HouseLine size={20} />
