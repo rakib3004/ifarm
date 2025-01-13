@@ -9,59 +9,139 @@ import {
   Truck,
   User,
 } from "phosphor-react";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "keep-react";
+
 const Landing = () => {
   return (
-<div className="flex">
-  <div>
-  <Sidebar>
-      <SidebarBody>
+    <div className="flex">
+      <div>
+        <Sidebar>
+          <SidebarBody>
+            <img
+              src="images/logo.png"
+              alt="speaker"
+              className="rounded-full w-16 h-16"
+            />{" "}
+            <SidebarList>
+              <SidebarItem>
+                <HouseLine size={20} />
+                Home
+              </SidebarItem>
+              <SidebarItem>
+                <BoundingBox size={20} />
+                Products
+              </SidebarItem>
+              <SidebarItem>
+                <MapPinLine size={20} />
+                Track
+              </SidebarItem>
+              <SidebarItem>
+                <PersonSimple size={20} />
+                Sellers
+              </SidebarItem>
+              <SidebarItem>
+                <User size={20} />
+                Buyers
+              </SidebarItem>
+              <SidebarItem>
+                <Truck size={20} />
+                Transport
+              </SidebarItem>
+              <SidebarItem>
+                <ShoppingBag size={20} />
+                Trade
+              </SidebarItem>
+              <SidebarItem>
+                <Heart size={20} />
+                Support
+              </SidebarItem>
+            </SidebarList>
+          </SidebarBody>
+        </Sidebar>
+      </div>
+      <div className="relative w-full h-screen flex items-center justify-center">
+        {/* Background Image */}
         <img
-          src="images/logo.png"
-          alt="speaker"
-          className="rounded-full w-16 h-16"
-        />{" "}
-        <SidebarList>
-          <SidebarItem>
-            <HouseLine size={20} />
-            Home
-          </SidebarItem>
-          <SidebarItem>
-            <BoundingBox size={20} />
-            Products
-          </SidebarItem>
-          <SidebarItem>
-            <MapPinLine size={20} />
-            Track
-          </SidebarItem>
-          <SidebarItem>
-            <PersonSimple size={20} />
-            Sellers
-          </SidebarItem>
-          <SidebarItem>
-            <User size={20} />
-            Buyers
-          </SidebarItem>
-          <SidebarItem>
-            <Truck size={20} />
-            Transport
-          </SidebarItem>
-          <SidebarItem>
-            <ShoppingBag size={20} />
-            Trade
-          </SidebarItem>
-          <SidebarItem>
-            <Heart size={20} />
-            Support
-          </SidebarItem>
-        </SidebarList>
-      </SidebarBody>
-    </Sidebar>
-  </div>
-  <div>
-    <h1>Welcome to Crop Chain</h1>
-<img src="images/landing.png" alt="Crop Chain" />
-  </div>
-</div>
+          src="images/landing.png"
+          alt="Crop Chain"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        />
+
+        {/* Text Overlay */}
+        <h1 className="relative -mt-96 p-8 text-white text-5xl font-bold z-10 bg-emerald-500 shadow-lg  shadow-emerald-500/50">
+          Welcome to Crop Chain
+        </h1>
+        <div className="absolute mt-80 mr-96 -ml-96">
+          <Card>
+            <CardHeader>
+              <img
+                src="images/products.jpg"
+                className="rounded-t-xl"
+                alt="image"
+                width={600}
+                height={300}
+              />
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <CardTitle>Visit Available Products</CardTitle>
+              <CardDescription>
+                Visit available products those you can buy directly from farms.
+              </CardDescription>
+              <Button>Visit Products</Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="absolute mt-80">
+          <Card>
+            <CardHeader>
+              <img
+                src="images/transportations.jpg"
+                className="rounded-t-xl"
+                alt="image"
+                width={400}
+                height={150}
+              />
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <CardTitle>Visit Available Transportaions</CardTitle>
+              <CardDescription>
+                Visit available transportaion those make easy to reach your product.
+              </CardDescription>
+              <Button>Visit Transportaion</Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="absolute mt-80 ml-96 -mr-96">
+          <Card>
+            <CardHeader>
+              <img
+                src="images/track.png"
+                className="rounded-t-xl"
+                alt="image"
+                width={600}
+                height={300}
+              />
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <CardTitle>Track Your Products Location</CardTitle>
+              <CardDescription>
+                Track product in real time for predict time to reach product in your hand.
+              </CardDescription>
+              <Button>Track Products</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
   );
 };
 export default Landing;
