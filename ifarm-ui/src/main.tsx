@@ -11,10 +11,20 @@ import { Buyers } from "./components/Buyers.tsx";
 import { Transports } from "./components/Transports.tsx";
 import { TrackDelivery } from "./components/track/TrackDelivery.tsx";
 import Dashboard from "./components/dashboard/Dashboard.tsx";
+import Register from "./components/auth/Register.tsx";
+import Login from "./components/auth/Login.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
   {
     path: "/dashboard",

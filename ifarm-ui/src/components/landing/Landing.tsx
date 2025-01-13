@@ -18,9 +18,11 @@ import {
   CardTitle,
 } from "keep-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Landing = () => {
   const [isLogged, setIsLogged] = useState(false);
-
+  const navigate = useNavigate(); // React Router hook for navigation
   return (
     <div className="flex relative">
       {/* Sidebar */}
@@ -79,13 +81,19 @@ const Landing = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
 
-        {/* Login/Register Button - Top Right */}
-        <div className="absolute top-5 right-5">
+         {/* Login/Register Button - Top Right */}
+         <div className="absolute top-5 right-5">
           <button
             className="px-6 py-2 bg-emerald-600 text-white rounded-lg shadow-md hover:bg-emerald-700 transition"
-            // onClick={() => setIsLogged(!isLogged)}
+            onClick={() => navigate("/login")} // Redirect to Login Page
           >
-            {isLogged ? "Register" : "Login"}
+            Login
+          </button>
+          <button
+            className="px-6 py-2 ml-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
+            onClick={() => navigate("/register")} // Redirect to Register Page
+          >
+            Register
           </button>
         </div>
 
