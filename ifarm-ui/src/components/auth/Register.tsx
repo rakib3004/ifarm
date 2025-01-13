@@ -11,11 +11,11 @@ const Register = () => {
   });
   const [error, setError] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     if (!formData.fullName || !formData.email || !formData.password || !formData.confirmPassword) {
       setError("All fields are required.");

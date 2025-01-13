@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     
      <div className="main">
-            <h3 className="head">eFarm Dashboard</h3>
+            <h3 className="head">Crop Chain Dashboard</h3>
             <div className="container">
                 <ul>
                     <li>

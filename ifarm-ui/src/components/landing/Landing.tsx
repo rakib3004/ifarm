@@ -35,35 +35,35 @@ const Landing = () => {
               className="rounded-full w-16 h-16"
             />
             <SidebarList>
-              <SidebarItem>
+              <SidebarItem onClick={() => navigate("/")}>
                 <HouseLine size={20} />
                 Home
               </SidebarItem>
-              <SidebarItem>
+              <SidebarItem onClick={() => navigate("/products")}>
                 <BoundingBox size={20} />
                 Products
               </SidebarItem>
-              <SidebarItem>
+              <SidebarItem onClick={() => navigate("/trackDelivery")}>
                 <MapPinLine size={20} />
                 Track
               </SidebarItem>
-              <SidebarItem>
-                <PersonSimple size={20} />
-                Sellers
-              </SidebarItem>
-              <SidebarItem>
-                <User size={20} />
-                Buyers
-              </SidebarItem>
-              <SidebarItem>
+              <SidebarItem onClick={() => navigate("/transports")}>
                 <Truck size={20} />
                 Transport
               </SidebarItem>
-              <SidebarItem>
+              <SidebarItem onClick={() => navigate("/trade")}>
                 <ShoppingBag size={20} />
                 Trade
               </SidebarItem>
-              <SidebarItem>
+              <SidebarItem onClick={() => navigate("/sellers")}>
+                <PersonSimple size={20} />
+                Sellers
+              </SidebarItem>
+              <SidebarItem onClick={() => navigate("/buyers")}>
+                <User size={20} />
+                Buyers
+              </SidebarItem>
+              <SidebarItem onClick={() => navigate("/dashboard")}>
                 <Heart size={20} />
                 Support
               </SidebarItem>
@@ -119,7 +119,7 @@ const Landing = () => {
               <CardDescription>
                 Visit available products that you can buy directly from farms.
               </CardDescription>
-              <Button>Visit Products</Button>
+              <Button onClick={() => navigate("/products")}>Visit Products</Button>
             </CardContent>
           </Card>
         </div>
@@ -140,7 +140,7 @@ const Landing = () => {
               <CardDescription>
                 Visit available transportation options that make it easy to receive your product.
               </CardDescription>
-              <Button>Visit Transportation</Button>
+              <Button onClick={() => navigate("/transports")}>Visit Transportation</Button>
             </CardContent>
           </Card>
         </div>
@@ -161,7 +161,7 @@ const Landing = () => {
               <CardDescription>
                 Track products in real-time to predict when they will arrive.
               </CardDescription>
-              <Button>Track Products</Button>
+              <Button onClick={() => navigate("/trackDelivery")}>Track Products</Button>
             </CardContent>
           </Card>
         </div>
