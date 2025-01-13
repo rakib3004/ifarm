@@ -17,10 +17,13 @@ import {
   CardHeader,
   CardTitle,
 } from "keep-react";
-
+import { useState } from "react";
 const Landing = () => {
+  const [isLogged, setIsLogged] = useState(false);
+
   return (
-    <div className="flex">
+    <div className="flex relative">
+      {/* Sidebar */}
       <div>
         <Sidebar>
           <SidebarBody>
@@ -28,7 +31,7 @@ const Landing = () => {
               src="images/logo.png"
               alt="speaker"
               className="rounded-full w-16 h-16"
-            />{" "}
+            />
             <SidebarList>
               <SidebarItem>
                 <HouseLine size={20} />
@@ -66,6 +69,8 @@ const Landing = () => {
           </SidebarBody>
         </Sidebar>
       </div>
+
+      {/* Main Content */}
       <div className="relative w-full h-screen flex items-center justify-center">
         {/* Background Image */}
         <img
@@ -74,10 +79,22 @@ const Landing = () => {
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
 
-        {/* Text Overlay */}
-        <h1 className="relative -mt-96 p-8 text-white text-5xl font-bold z-10 bg-emerald-500 shadow-lg  shadow-emerald-500/50">
+        {/* Login/Register Button - Top Right */}
+        <div className="absolute top-5 right-5">
+          <button
+            className="px-6 py-2 bg-emerald-600 text-white rounded-lg shadow-md hover:bg-emerald-700 transition"
+            // onClick={() => setIsLogged(!isLogged)}
+          >
+            {isLogged ? "Register" : "Login"}
+          </button>
+        </div>
+
+        {/* Welcome Text */}
+        <h1 className="relative -mt-96 p-8 text-white text-5xl font-bold z-10 bg-emerald-500 shadow-lg shadow-emerald-500/50">
           Welcome to Crop Chain
         </h1>
+
+        {/* Cards Section */}
         <div className="absolute mt-80 mr-96 -ml-96">
           <Card>
             <CardHeader>
@@ -92,7 +109,7 @@ const Landing = () => {
             <CardContent className="space-y-3">
               <CardTitle>Visit Available Products</CardTitle>
               <CardDescription>
-                Visit available products those you can buy directly from farms.
+                Visit available products that you can buy directly from farms.
               </CardDescription>
               <Button>Visit Products</Button>
             </CardContent>
@@ -111,11 +128,11 @@ const Landing = () => {
               />
             </CardHeader>
             <CardContent className="space-y-3">
-              <CardTitle>Visit Available Transportaions</CardTitle>
+              <CardTitle>Visit Available Transportations</CardTitle>
               <CardDescription>
-                Visit available transportaion those make easy to reach your product.
+                Visit available transportation options that make it easy to receive your product.
               </CardDescription>
-              <Button>Visit Transportaion</Button>
+              <Button>Visit Transportation</Button>
             </CardContent>
           </Card>
         </div>
@@ -134,7 +151,7 @@ const Landing = () => {
             <CardContent className="space-y-3">
               <CardTitle>Track Your Products Location</CardTitle>
               <CardDescription>
-                Track product in real time for predict time to reach product in your hand.
+                Track products in real-time to predict when they will arrive.
               </CardDescription>
               <Button>Track Products</Button>
             </CardContent>
