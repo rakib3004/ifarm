@@ -48,10 +48,10 @@ const Landing = () => {
                 <Truck size={20} />
                 Transport
               </SidebarItem>
-              <SidebarItem onClick={() => navigate("/trade")}>
+              {/* <SidebarItem onClick={() => navigate("/trade")}>
                 <ShoppingBag size={20} />
                 Trade
-              </SidebarItem>
+              </SidebarItem> */}
               <SidebarItem onClick={() => navigate("/sellers")}>
                 <PersonSimple size={20} />
                 Sellers
@@ -60,10 +60,10 @@ const Landing = () => {
                 <User size={20} />
                 Buyers
               </SidebarItem>
-              <SidebarItem onClick={() => navigate("/dashboard")}>
+              {/* <SidebarItem onClick={() => navigate("/dashboard")}>
                 <Heart size={20} />
                 Support
-              </SidebarItem>
+              </SidebarItem> */}
             </SidebarList>
           </SidebarBody>
         </Sidebar>

@@ -7,11 +7,13 @@ import {
   TableRow,
 } from "keep-react";
 import {transports} from '../data/legacy/transports.ts'
+import Logo from "./common/Logo.tsx";
 
 export const Transports = () => {
 
   return (
     <div>
+      <Logo></Logo>
       <h1 className="font-semibold text-center text-3xl my-12">List of Available Transports</h1>
       <Table>
         <TableHeader>
